@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head id="headInicio">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Obligatorio P1</title>
+</head>
+<div id="contenedor"></div>
+<body>
+  <header>
+    <nav>
+      <img id="logo" src="https://p1.develotion.com/cart.jpg" alt="logo" />
+      <ul id="navPrincipal">
+        <div id="head-inicio">
+          <li id="liMostrarLogin" ><a href="#seccionLogin">Login</a></li>
+          <li id="liMostrarRegistrarse" ><a href="#seccionRegistrarse">Registrarse</a></li>
+        </div>
+        <div id="head-comprador">
+          <li id="liComprarProductos" ><a href="#">Comprar Prodructos</a></li>
+          <li id="liListadeComprasComprador"><a href="#">Lista de compras</a></li>
+          <li id="liOfertas"><a href="#">Ofertas</a></li>
+          <li id="liCerrarComprador"><a href="#">Cerrar Sesión</a></li>
+        </div>
+        <div id="head-administrador">
+          <li id="liCrearProducto"><a href="#">Crear nuevo producto</a></li>
+          <li id="liAdministrarProducto"><a href="#">Administrar Productos</a></li>
+          <li id="liListadeComprasAdmin"><a href="#">Lista de compras</a></li>
+          <li id="liGanancias"><a href="#">Ganancia</a></li>
+          <li id="liCerrarAdmin"><a href="#">Cerrar Sesión</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="seccionLogin">
+      <h1>Login</h1>
+      <label for="txtNombredeUsuario">Nombre de Usuario: </label>
+      <input type="text" id="txtNombredeUsuario" required>
+      <label for="txtContrasenia">Contraseña: </label>
+      <input type="password" id="txtContrasenia" required>
+      <input type="button" id="btnLogin" value="Ingresar">
+      <p id="mensajeLogin"></p>
+    </div>
+  
+    <div id="seccionRegistrarse">
+      <h1>Registrarse</h1>
+      <label for="txtNombre">Nombre: </label>
+      <input type="text" id="txtNombre" required>
+      <label for="txtApellido">Apellido: </label>
+      <input type="text" id="txtApellido" required>
+      <label for="txtNombredeUsuarioR">Nombre de usuario: </label>
+      <input type="text" id="txtNombredeUsuarioR" required>
+      <label for="txtContraseniaR">Contraseña: </label>
+      <input type="password" id="txtContraseniaR" required>
+      <label for="txtTarjetaCredito">Tarjeta de crédito: </label>
+      <input type="text" id="txtTarjetaCredito" required>
+      <label for="txtCVC">CVC: </label>
+      <input type="text" id="txtCVC" required>
+      <input type="button" id="btnRegistrarse" value="Registrarse">
+      <p id="pRegistroExitoso"></p>
+    </div>     
+
+</div>
+
+<div id="seccionComprarProductos">
+  <h1>Comprar Productos</h1>
+  <input type="button" id="btnComprar" value="Comprar">
+  <div id="divMostrarComprar"></div>
+  <div id="resultadoCompra"></div>
+</div>
+
+<div id="seccionListadeComprasComprador">
+  <h1>Lista de compras</h1>
+  <label>Filtrar por Estado:</label><select id="selEstadoCompra">
+  </select>
+  <div id="productosCompradosComprador"></div>
+  <p id="mensajeComprasySaldo"></p>
+</div>
+
+<div id="seccionOfertas">
+  <h1>Ofertas</h1>
+    <div id="ofertas"></div>
+</div>
+
+<div id="seccionCrearProducto">
+  <h1>Crear Producto</h1>
+  <label for="txtNombreProducto">Nombre: </label>
+  <input type="text" id="txtNombreProducto" required>
+  <label for="txtPrecio">Precio: </label>
+  <input type="text" id="txtPrecio" required>
+  <label for="txtDescripcion">Descripcion: </label>
+  <input type="text" id="txtDescripcion" required>
+  <label> Imagen: </label>
+  <input type="file" id="filImagen" value="Selecione imagen"/><br>
+  <label for="txtCantidadStock">Cantidad de stock: </label>
+  <input type="text" id="txtCantidadStock" required>
+  <input type="button" id="btnCrearProducto" value="Crear Producto">
+  <p id="ProductoCreado"></p>
+</div> 
+
+<div id="seccionListadeComprasAdmin">
+  <h1>Lista de compras</h1>
+  <label>Filtrar por Estado:</label><select id="selEstadoCompraAdmin"></select>
+  <div id="productosCompradosAdmin"></div>
+</div>
+
+<div id="seccionAdministrarProductos">
+  <h1>Administrar productos</h1>
+    <div id="administrarProductos"></div>
+</div>
+
+<div id="seccionInformedeGanancia">
+  <h1>Informe de Ganancia</h1>
+    <div id="informedeGanancia"></div>
+</div>
+     
+
+  </main>
+    <script src="js/sistema.js"></script>
+    <script src="js/usuario.js"></script>
+    <script src="js/producto.js"></script>
+    <script src="js/compra.js"></script>
+    <script src="js/preCarga.js"></script>
+    <script src="js/scriptUI.js"></script>
+</body>
+</html>
